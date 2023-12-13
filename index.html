@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script type="text/babel">
+      let container = document.getElementById("container");
+
+      function UI() {
+        return (
+          <div class="content">
+            <div class="heading">
+              <h1>Topics covered</h1>
+              <p>
+                The following is a list of all the topics we cover in the MDN
+                learning area.
+              </p>
+            </div>
+            <div class="topics">
+              <dl>
+                <dt>
+                  <a href="#">Getting started with the web</a>
+                </dt>
+                <dd>
+                  Provides a practical introduction to web development for
+                  complete beginners.
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <a href="#">HTML — Structuring the web</a>
+                </dt>
+                <dd>
+                  HTML is the language that we use to structure the different
+                  parts of our content and define what their meaning or purpose
+                  is. This topic teaches HTML in detail.
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <a href="#">CSS — Styling the web</a>
+                </dt>
+                <dd>
+                  CSS is the language that we use to control our web content's
+                  style and layout, as well as adding behavior like animation.
+                  This topic provides comprehensive coverage of CSS.
+                </dd>
+              </dl>
+            </div>
+          </div>
+        );
+      }
+      ReactDOM.render(UI(), container);
+    </script>
+  </body>
+</html>
